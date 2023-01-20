@@ -1,0 +1,21 @@
+{
+  "name": "npm-library-boilerplate",
+  "version": "1.0.1",
+  "description": "Boilerplate code for creating a new npm package",
+  "repository": {
+    "url": "https://github.com/dikshit-n/npm-library-boilerplate"
+  },
+  "author": "dikshit-n",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist/lib && tsc",
+    "git:sync": "git add . && git commit -m $npm_config_m && git pull && git push",
+    "publish:public": "cd dist && npm version $npm_config_v && npm publish --access=public"
+  },
+  "devDependencies": {
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^5.0.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {}
+}
